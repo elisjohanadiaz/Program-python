@@ -1,10 +1,8 @@
-# ==========================================
+
 # PROBLEMA 1: Clasificación de compromiso
-# ==========================================
+
 
 # Matriz con los datos:
-# [ID Cliente, Duración en segundos, Eventos Clics]
-
 sesiones = [
     ["C001", 240, 12],
     ["C002", 45, 2],
@@ -12,10 +10,6 @@ sesiones = [
     ["C004", 200, 9],
     ["C005", 75, 1]
 ]
-
-# ------------------------------------------
-# Función para clasificar el compromiso
-# ------------------------------------------
 def clasificar_compromiso(duracion, clics):
     if duracion > 180 and clics > 8:
         return "Alto"
@@ -24,9 +18,7 @@ def clasificar_compromiso(duracion, clics):
     else:
         return "Medio"
 
-# ------------------------------------------
 # Función para generar el informe
-# ------------------------------------------
 def generar_informe(matriz):
     print("INFORME DE COMPROMISO DE CLIENTES")
     print("-" * 40)
@@ -44,8 +36,6 @@ def generar_informe(matriz):
         print("ID Cliente:", id_cliente)
         print("Clasificación:", clasificacion)
         print("-" * 40)
-
-# ------------------------------------------
+        
 # Programa principal
-# ------------------------------------------
 generar_informe(sesiones)
